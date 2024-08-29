@@ -1,0 +1,28 @@
+#login .side-left  {
+       padding: 50px 20px;
+}
+
+       #login .side-left .title h2  {
+              font-size: 40px;
+              font-weight: bold;
+       }
+
+       #login .side-left .inputs-form .input  {
+              margin: 20px 0px;
+       }
+
+       #login .side-left p a {
+              color: rgb(131, 131, 230);
+              text-decoration: 1px underline rgb(131, 131, 230);
+       }
+
+#login .side-right {
+       padding: 0;
+       width: 54%;
+}
+
+       #login .side-right video {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+       }

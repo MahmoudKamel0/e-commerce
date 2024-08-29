@@ -1,0 +1,12 @@
+.btn-top {
+       bottom: 20px;
+       right: -100px;
+       height: 40px;
+       width: 40px;
+       background: var(--main-bg);
+       color: var(--primary-color);
+       transition: var(--transition);
+}
+.btn-top_active{
+       right: 20px;
+}

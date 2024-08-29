@@ -1,0 +1,56 @@
+.sliders {
+       height: 85.55vh;
+}
+
+       /* burtons clickable */
+       .sliders .swiper-pagination span {
+              background: #3ef;
+       }
+       
+       .sliders .swiper-pagination span {
+              background: #3ef;
+       }
+
+       #category-slide .items .item {
+              height: 270px;
+              border-radius: 10px;
+              overflow: hidden;
+       }
+
+       #category-slide .items .item::before {
+              content: '';
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              background: rgba(0, 0, 0, 0.541);
+              transition: var(--transition);
+       }
+
+       #category-slide .items .item:hover::before {
+              background: rgba(0, 0, 0, 0.349);
+       }
+
+       #category-slide .items .item .photo {
+              height: 100%;
+       }
+
+       #category-slide .items .item .photo img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+       }
+
+       #category-slide .items .item .info {
+              width: 80%;
+              margin: auto;
+              padding: 8px 20px;
+              font-size: 14px;
+              bottom: 40px;
+              left: 0px;
+              right: 0;
+              background: #fff;
+              border-radius: 5px;
+       }
+
+
+

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+       font-family      : "Montserrat", sans-serif;
+       line-height      : 1.5;
+       font-weight      : 400;
+       font-size        : 10px;
+
+       --transition     : 0.5s;
+
+       --primary-bg     : #ffffff;
+       --primary-color  : var(--primary-bg);
+
+       --main-bg        : #333;
+       --main-color     : var(--main-bg);
+
+       --trans-black    : rgba(0, 0, 0, 0.041);
+       --border         : var(--trans-black);
+       
+       /* scroll bar */
+       --sb-thumb-color : #323333;
+       --sb-size        : 10px;
+
+       --red-bg         : #ce0101;
+       --red-color      : #ce0101;
+
+       scroll-behavior: smooth;
+}
+body * {
+       font-size: 1.6rem;
+}
+
+body::-webkit-scrollbar {
+       width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+       background: var(--primary-bg);
+       border-radius: 13px;
+}
+
+body::-webkit-scrollbar-thumb {
+       background: var(--sb-thumb-color);
+       border-radius: 13px;
+       border: 2px solid #fff;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+       body {
+              scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+       }
+}
+
+section {
+       padding: 20px 70px;
+
+}@media (max-width: 600px){
+       section {
+              padding: 20px 30px;
+       }
+}
+
+       section h2.title {
+              font-size: 3rem;
+              font-weight: bold;
+              color: #444;
+              margin: 50px 0px;
+       }
+
+
+.cover-photo {
+       height: 100%;
+       width: 100%;
+       object-fit: cover;
+}

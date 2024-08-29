@@ -1,0 +1,128 @@
+.navigation {
+       padding: 20px 25px;
+}
+
+       .navigation menu {
+              padding-left: 20px;
+       }
+
+       .navigation menu .menu-links li {
+              margin: 0px 20px;
+              cursor: pointer;
+       }
+
+       .navigation menu .menu-links li a {
+              font-size: 1.5rem;
+              color: var(--main-color);
+              position: relative;
+       }
+
+       .navigation menu .menu-links li a:hover::before,
+       .navigation menu .menu-links li a.active::before {
+              content: "";
+              position: absolute;
+              height: 3px;
+              width: 3px;
+              bottom: -10px;
+              left: 50%;
+              border-radius: 50%;
+              background: var(--main-bg);
+       }
+
+       .navigation menu .part-login-social .social-media {
+              margin-right: 20px;
+       }
+
+       .navigation menu .part-login-social .social-media li a {
+              height: 25px;
+              width: 25px;
+              margin: 0px 5px;
+              font-size: 1.2rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: var(--main-color);
+              border: 1px solid var(--main-bg);
+              border-radius: 50%;
+              transition: var(--transition);
+
+              /* prefix */
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              -webkit-transition: var(--transition);
+              -o-transition: var(--transition);
+       }
+
+       .navigation menu .part-login-social .social-media li a:hover {
+              background: var(--main-bg);
+              color: #eee;
+       }
+
+       .navigation menu .part-login-social .login-register a {
+              margin: 0px 5px;
+              padding: 10px 5px;
+              font-size: 1.5rem;
+              display: flex;
+              align-items: center;
+              border-radius: 50px;
+              cursor: pointer;
+       }
+
+       /* style profile if login user */
+       .navigation menu .part-login-social .login-register .profile {
+              padding: 5px 10px;
+              border-radius: 10px;
+              cursor: pointer;
+       }
+
+       .navigation menu .part-login-social .login-register .profile:hover {
+              background: #eee;
+       }
+
+       .navigation menu .part-login-social .login-register .profile .name {
+              max-width: 150px;
+       }
+
+       .navigation menu .part-login-social .login-register .profile .name p {
+              text-overflow: ellipsis;
+              text-wrap: nowrap;
+              overflow: hidden;
+       }
+
+       .navigation menu .part-login-social .login-register .profile .drop-user-list {
+              width: 250px;
+              padding: 5px 10px;
+              top: 60px;
+              background: #fdfcfc;
+              border: 1px solid var(--border );
+       }
+
+       .navigation menu .part-login-social .login-register .profile .drop-user-list li {
+              margin: 5px 0;
+              padding: 5px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 1.5rem;   
+       }
+
+       .navigation menu .part-login-social .login-register .profile .drop-user-list li:hover {
+              background-color: #f5f5f3;
+       }
+
+       /* mobile responsive media */
+       @media (max-width: 1024px) {
+              .navigation menu .menu-links {
+                     width: 100%;
+                     background: #eee;
+                     top: 70px;
+                     left: 0;
+                     text-align: center;
+              }
+
+              .navigation menu .menu-links li {
+                     margin: 20px 0;
+              }
+       }

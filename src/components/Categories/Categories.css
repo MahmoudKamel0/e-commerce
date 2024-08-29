@@ -1,0 +1,83 @@
+#categories .card {
+       border-radius: 10px;
+       border: 1px solid #0001;
+       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+       #categories h2 {
+              font-size: 3rem;
+              font-weight: bold;
+              margin: 20px 0;
+       }
+
+       /* part Sale */
+       #categories .card .sale {
+              top: 10px;
+              left: 10px;
+              padding: 3px 10px;
+              font-size: 13px;
+              border-radius: 5px;
+              color: var(--primary-color);
+              background: var(--red-bg );
+       }
+
+       /* part Photo */
+       #categories .card .photo {
+              height: 350px;
+              width: 100%;
+       }
+
+       #categories .card .photo img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              transition: var(--transition);
+       }
+
+       #categories .card:hover .photo img {
+              transform: scale(1.1);
+       }
+       
+       /* part Footer */
+       #categories .card .footer {
+              height: 140px;
+              padding: 20px 15px;
+       }
+
+       #categories .card .footer .details {
+              max-width: 80%;
+       }
+
+       #categories .card .footer .details h3 {
+              max-height: 43px;
+              margin-top: 20px;
+              padding-right: 15px;
+              font-weight: 500;
+              font-size: 15px;
+              color: var(--main-color);
+       }
+
+       #categories .card .footer .details .price {
+              margin-block: 5px;
+              font-size: 25px;
+              font-weight: bold;
+              color: var(--main-color);
+       }
+
+       #categories .card .footer .details .price .sale-price {
+              font-size: 15px;
+              font-weight: 400;
+              color: #999;
+              text-decoration: line-through;
+       }
+
+       #categories .card .footer .details .rate {
+              margin-bottom: 20px;
+              color: gold;
+       }
+
+       #categories .card .footer button.icon {
+              padding: 10px;
+              border-radius: 5px;
+              color: var(--primary-color);
+              background: var(--main-color);
+       }

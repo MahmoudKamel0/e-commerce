@@ -1,0 +1,10 @@
+#createCashOrder label {
+       font-size: 1.3rem;
+}
+#createCashOrder :is(input , select) {
+       padding: 7px !important;
+}
+#createCashOrder button {
+       padding: 15px 0;
+       font-size: 1.4rem;
+}

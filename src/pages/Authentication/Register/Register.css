@@ -1,0 +1,150 @@
+form :is(.side-left, .side-right)  {
+       min-height: 100vh;
+}
+       form .side-left {
+              min-height: 100vh;
+              /* width: 70vmax; */
+              padding: 50px 10px 50px 30px;
+       }
+       form .side-left .title h2 {
+              font-size: 30px;
+              font-weight: 500;
+       }
+
+       form .side-left .title p {
+              color: #333;
+       }
+
+       form .side-left .title p a {
+              color: rgb(131, 131, 230);
+              text-decoration: 1px underline rgb(131, 131, 230);
+       }
+
+       form .side-left .input {
+              width: 100%;
+              padding: 10px;
+              position: relative;
+              border-radius: 10px;
+              background: #fff;
+              border: 1px solid #00000021;
+       }
+
+       form .side-left .input label {
+              font-size: 14px;
+              color: #999;
+       }
+
+       form .side-left .input input {
+              padding: 3px 0px;
+              width: 100%;
+              background: transparent;
+              outline: none;
+       }
+
+
+       /* Errors Validation part */
+       form .errors-validation li {
+              font-size: 14px;
+              color: #fd6868;
+              cursor: pointer;
+       }  
+       form .errors-validation li label {
+              cursor: pointer;
+       }     
+
+       /* Footer */
+       form .side-left .footer p {
+              color: #444;
+       }
+
+       form .side-left .footer p svg {
+              height: 30px;
+              width: 30px;
+              padding: 6px;
+              background: #e4e3e3;
+              border-radius: 50%;
+       }
+
+       form .side-left .footer p a {
+              color: rgb(131, 131, 230);
+       }
+
+       form .side-left .footer .buttons button {
+              padding: 10px 20px;
+              /* margin-left: 15px; */
+              border-radius: 50px;
+              color: rgb(131, 131, 230);
+              font-weight: 500;
+       }
+
+       form .side-left .footer .buttons button + button {
+              background: #eee;
+       }
+
+       form .side-left .footer .buttons button + button[disabled] {
+              opacity: 0.6;
+              cursor: no-drop;
+       }
+
+
+
+/* part two photo */
+form .side-right {
+       padding: 20px;
+       width: 30vmax;
+}
+
+       form .side-right .photo {
+              height: 100%;
+              width: 100%;
+              background: url(../../assets/images.jpeg) center/cover no-repeat;
+              clip-path: polygon(10% 0%, 90% 0, 99% 99%, 15% 96%);
+              backdrop-filter: blur(10px);
+              position: relative;
+              overflow: hidden;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+       }
+
+       form .side-right .photo :is(h3, p, a) {
+              position: relative;
+              z-index: 10;
+              color: #fff;
+              text-align: center;
+       }
+
+       form .side-right .photo h3 {
+              font-size: 25px;
+              font-weight: bold;
+       }
+
+       form .side-right .photo p {
+              font-size: 14px;
+              width: 70%;
+       }
+
+       form .side-right .photo a {
+              margin-top: 20px;
+              padding: 10px 20px;
+              font-size: 14px;
+              border: 1px solid #fff;
+              border-radius: 50px;
+              transition: var(--transition);
+       }
+
+       form .side-right .photo a:hover {
+              color: #333;
+              background: #fff;
+       }
+
+
+       form .side-right .photo::before {
+              content: '';
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              background: #0000006b;
+              backdrop-filter: blur(5px);
+       }
+
