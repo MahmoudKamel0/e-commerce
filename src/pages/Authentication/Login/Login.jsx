@@ -1,6 +1,8 @@
 // import martial UI
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
 
 // import Login style sheet css
 import './Login.css'
@@ -28,10 +30,11 @@ import * as Yup from 'yup';
 export default function Login() {
 
        // context user Context
-       let {setIsUser} = useContext(userContext)
-
-       let navigate = useNavigate() 
+       const {setIsUser} = useContext(userContext)
+       const navigate = useNavigate() 
+       
        const [loading, setLoading] = useState(false)
+       const [responseMassage , setResponseMassage] = useState()
 
        // send data user to server database
        async function sendDataUserLogin(dataUser){
@@ -41,10 +44,12 @@ export default function Login() {
                             localStorage.setItem('userToken',response.data.token)
                             setIsUser(response.data.token)
                             setTimeout(() => {navigate('/')},3000)
+                            setResponseMassage(response.data)
                      })
                      .catch(function(error){
                             console.log('error',error);
                             setTimeout(()=>{setLoading(false)},1000) // this function for stop loding
+                            setResponseMassage(error.response.data)
                      })
                      .finally(function(){
                             setLoading(true)
@@ -81,6 +86,14 @@ export default function Login() {
               <Backdrop sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }} open={open}>
                      <CircularProgress color="inherit" />
               </Backdrop>
+              </div>
+
+              {/* Alert component display status register  */}
+              <div className={`alert | hidden ${responseMassage?.message === "success" || responseMassage?.statusMsg === "fail" ? '!block' : '' }`}>
+              <Alert severity={responseMassage?.message ==="success" ? "success" : "warning"}>
+                     <AlertTitle>{responseMassage?.message ==="success" ? "Success" : "Warning"}</AlertTitle>
+                     <p>{responseMassage?.message ==="success"? 'Welcome you in new world' : responseMassage?.message}</p>
+              </Alert>
               </div>
 
               <form id='login' onSubmit={loginUser.handleSubmit} className='flex' method='post'>
