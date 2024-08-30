@@ -125,7 +125,7 @@ export default function NavigationBar() {
                                    {/* cart part */}
                                    <Link className='cart | relative flex ms-1' to='/Cart'>
                                           <CiShoppingCart size={25} />
-                                          <span className="count">{data?.data.numOfCartItems}</span>
+                                          <span className="count">{localStorage.getItem('userToken') ? data?.data.numOfCartItems : 0}</span>
                                    </Link>
                                    
                                    {/* button menu responsive */}

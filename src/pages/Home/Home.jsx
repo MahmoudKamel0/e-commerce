@@ -18,6 +18,7 @@ import bestSeller from '../../assets/categories/best seller.webp'
 import Men from '../../assets/categories/men.jpg'
 import Women from '../../assets/categories/women.jpeg'
 import Kids from '../../assets/categories/kids.jpg'
+import electronics from '../../assets/categories/electronics.jpg'
 
 // import Home style sheet css
 import './Home.css'
@@ -72,36 +73,36 @@ export default function Home() {
                      <Swiper className="items | mySwiper" slidesPerView={4}  spaceBetween={30} modules={[Pagination,Navigation]} breakpoints={{1000:{slidesPerView:4},850:{slidesPerView:3},500:{slidesPerView:2},300:{slidesPerView:1},}}>
                             <SwiperSlide>
                             <div className="item | relative">
-                                   <div className="photo"><img src={bestSeller} alt="" loading="lazy" /></div>
+                                   <div className="photo"><img src={bestSeller} alt="Best Seller" loading="lazy" /></div>
                                    <Link to='' className="info | flex items-center justify-between absolute">Best Seller <IoIosArrowRoundForward size={25} /></Link>
                             </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                             <div className="item | relative">
-                                   <div className="photo"><img src={Men} alt="" loading="lazy" /></div>
+                                   <div className="photo"><img src={Men} alt="Shop Men" loading="lazy" /></div>
                                    <Link to='' className="info | flex items-center justify-between absolute">Shop Men <IoIosArrowRoundForward size={25} /></Link>
                             </div>
                             </SwiperSlide>
                             
                             <SwiperSlide>
                             <div className="item | relative">
-                                   <div className="photo"><img src={Women} alt="" loading="lazy" /></div>
+                                   <div className="photo"><img src={Women} alt="Shop Women" loading="lazy" /></div>
                                    <Link to='' className="info | flex items-center justify-between absolute">Shop Women <IoIosArrowRoundForward size={25} /></Link>
                             </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                             <div className="item | relative">
-                                   <div className="photo"><img src={Kids} alt="" loading="lazy" /></div>
-                                   <Link to='' className="info | flex items-center justify-between absolute">Best Seller <IoIosArrowRoundForward size={25} /></Link>
+                                   <div className="photo"><img src={Kids} alt="Shop electronics" loading="lazy" /></div>
+                                   <Link to='' className="info | flex items-center justify-between absolute">Shop Kids <IoIosArrowRoundForward size={25} /></Link>
                             </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                             <div className="item | relative">
-                                   <div className="photo"><img src={Kids} alt="" loading="lazy" /></div>
-                                   <Link to='' className="info | flex items-center justify-between absolute">Best Seller <IoIosArrowRoundForward size={25} /></Link>
+                                   <div className="photo"><img src={electronics} alt="Shop electronics" loading="lazy" /></div>
+                                   <Link to='' className="info | flex items-center justify-between absolute">Shop electronics <IoIosArrowRoundForward size={25} /></Link>
                             </div>
                             </SwiperSlide>
                      </Swiper>

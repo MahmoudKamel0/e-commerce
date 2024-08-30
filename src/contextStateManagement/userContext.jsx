@@ -15,8 +15,7 @@ export default function UserContextProvider(props){
                      setIsUser(localStorage.getItem('userToken'))
                      let token = localStorage.getItem('userToken');
                      token = jwtDecode(token);
-                     setNameUser(token.name)
-                     
+                     setNameUser(token?.name)
               } 
        },[])
 

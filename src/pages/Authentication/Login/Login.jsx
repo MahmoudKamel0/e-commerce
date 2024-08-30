@@ -53,8 +53,12 @@ export default function Login() {
 
 
        let checkValidation = Yup.object({
-              email      : Yup.string().required('email input is Required').email('Wrong email'),
-              password   : Yup.string().required('password input is Required').matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,'Wrong password must start capital Charter and minim 8 Charter'),
+              email      : Yup.string()
+                            .required('email input is Required')
+                            .email('Wrong email'),
+              password   : Yup.string()
+                            .required('password input is Required')
+                            .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,'Wrong password must start capital Charter and minim 8 Charter'),
        })
 
        // Formik library code handle form data and send data to backend
@@ -83,7 +87,7 @@ export default function Login() {
               {/* side left Login */}
               <div className="side-left | w-full lg:w-[46%] flex flex-col justify-between">
                      <div className="title">
-                            <span>Login</span>
+                            <span className='inline-block'>Login</span>
                             <h2>Welcome Back</h2>
                             <p>Login now to see the new offers</p>
                      </div>

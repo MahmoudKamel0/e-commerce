@@ -10,7 +10,7 @@ import Snackbar from '@mui/material/Snackbar';
 import './Products.css'
 
 // import React and React Router Dom
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 // import React library
@@ -19,6 +19,7 @@ import { useState } from "react";
 
 
 export default function Products({products,isLoading}){
+       let navigate = useNavigate()
        const token = {token:localStorage.getItem('userToken')}
 
        // State for managing the toaster
@@ -27,7 +28,8 @@ export default function Products({products,isLoading}){
 
        // Function to add product to cart
        function handleAddToCart(productID){
-              axios.post('https://ecommerce.routemisr.com/api/v1/cart',{'productId':productID},{headers:token})
+              if (localStorage.getItem("userToken")){
+                     axios.post('https://ecommerce.routemisr.com/api/v1/cart',{'productId':productID},{headers:token})
                      .then(function(response) {
                             setToasterMessage(response.data.message);
                      })
@@ -38,6 +40,10 @@ export default function Products({products,isLoading}){
                             setToasterOpen(true);
                             setTimeout(() => setToasterOpen(false), 2000);
                      });
+
+              }else {
+                     navigate('/Login')
+              }
        }
               
        return (

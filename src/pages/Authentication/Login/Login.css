@@ -2,6 +2,12 @@
        padding: 50px 20px;
 }
 
+       #login .side-left .title span  {
+              padding: 7px 20px;
+              background: rgb(236, 236, 245);
+              border-radius: 20px;
+       }
+
        #login .side-left .title h2  {
               font-size: 40px;
               font-weight: bold;
