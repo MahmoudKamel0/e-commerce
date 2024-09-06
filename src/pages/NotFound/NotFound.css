@@ -1,0 +1,30 @@
+#not-found {
+       min-height: 85.3vh;
+}
+
+       #not-found span {
+              font-size: 1.7rem;
+       }
+
+       #not-found strong {
+              font-size: 2.7rem;
+       }
+
+       #not-found .buttons button {
+              padding: 9px 17px;
+              font-size: 1.4rem;
+       }
+
+       #not-found .buttons button:first-of-type {
+              background: var(--main-bg);
+              color: var(--primary-color);
+       }
+
+       #not-found .buttons button:last-of-type {
+              background: #0077b6;
+              color: var(--primary-color);
+       }
+
+       #not-found .photo {
+              height: 78vh;
+       }
